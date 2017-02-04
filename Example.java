@@ -3,7 +3,7 @@
  */
 public class Example implements Comparable<Example> {
     private String name;
-    private int age;
+    public int age;
     public int feet;
     private int inch;
 
@@ -16,37 +16,6 @@ public class Example implements Comparable<Example> {
     }
 
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getFeet() {
-        return feet;
-    }
-
-    public void setFeet(int feet) {
-        this.feet = feet;
-    }
-
-    public int getInch() {
-        return inch;
-    }
-
-    public void setInch(int inch) {
-        this.inch = inch;
-    }
 
     @Override
     public String toString() {
@@ -62,9 +31,9 @@ public class Example implements Comparable<Example> {
     @Override
     public int compareTo(Example o) {
         if (this.name.charAt(0) > o.name.charAt(0))
-            return -1;
-        if (this.name.charAt(0) < o.name.charAt(0))
             return 1;
+        if (this.name.charAt(0) < o.name.charAt(0))
+            return -1;
         else
             return 0;
     }

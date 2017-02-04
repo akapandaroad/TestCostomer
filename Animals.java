@@ -5,6 +5,7 @@
 public class Animals implements Comparable<Animals>{
     public  String name;
     public int age;
+
     public Animals(String name, int age) {
         this.name = name;
         this.age = age;
@@ -18,5 +19,13 @@ public class Animals implements Comparable<Animals>{
             return -1;
         else
             return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Animals{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

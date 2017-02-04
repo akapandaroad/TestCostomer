@@ -20,14 +20,14 @@ public class t{
 
         list2.add(new Example("bape", 55, 3, 4));
         list2.add(new Example("cock", 33, 9, 9));
-        Collections.sort(list);
-        Collections.sort(list2);
-      //需重写compareTo（）方法
-        for (Animals animals : list) {
-            System.out.println("Animals name=" + animals.name + "      "+"age="
-                    + animals.age);
-        }
-
+        Collections.sort(list);//animial age
+        System.out.println(list);
+        Collections.sort(list,new AnimalsComparator());//animal chatat(0)
+        System.out.println(list);
+       Collections.sort(list2);//example charat(0)
+//      //需重写compareTo（）方法
+       System.out.println(list2);
+        Collections.sort(list2,new ExamplesComartor());
         System.out.println(list2);
     }
 
